@@ -18,7 +18,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatExpansionModule,
-    MatGridListModule
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

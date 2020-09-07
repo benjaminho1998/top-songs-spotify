@@ -2,24 +2,25 @@
     display: flex;
     width: 100%;
     justify-content: space-around;
-    height: 100px;
+    height: 80px;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
+    margin-bottom: 70px;
 
     .col1 {
         flex-grow: 2;
         padding-left: 5%;
         font-size: 30px;
+
+        @media screen and (max-width: 600px) {
+            display: none; 
+        }
     }
 
     .mini-spacer {
         display: flex;
-        width: 30%;
+        flex-grow: 0.5;
         justify-content: space-around;
-    
-        span {
-            padding-left: 20px;
-        }
     }
     
     .dropdown {
@@ -42,5 +43,64 @@
             padding: 10px 15px 10px 5px;
         }
     }
+}
+
+@media screen and (max-width: 520px) {
+    .toolbar-container {
+        margin-bottom: 0px;
+    }
+} 
+
+.body-container {
+    margin: 0 auto;
+    width: 90%;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: normal;
+    margin-bottom: 50px;
+
+    .image {
+        display: block;
+        width: 260px;
+        height: 260px;
+    }
+
+    .subtext {
+        top: 0px;
+        left: 0px;
+        min-width: 300px;
+        position: absolute;
+    }
+
+    .button {
+        background-color: #1DB954;
+        color: white;
+        border-radius: 500px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        width: 260px;
+        height: 50px;
+        border: none;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 1390px) {
+        .subtext {
+          position: relative;
+          text-align: center;
+        }
+    }  
+    
+    @media screen and (max-width: 520px) {
+        .subtext {
+          font-size: 18px;
+        }
+        h1 {
+            font-size: 16px;
+        }
+    } 
 }
 

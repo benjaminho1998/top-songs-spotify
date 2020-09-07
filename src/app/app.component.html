@@ -8,9 +8,6 @@
     <span>Help</span>
     <span>Download</span>
     <span>|</span>
-    <span>
-      <i class="fas fa-user-circle fa-lg"></i>
-    </span>
   </span>
   <mat-accordion>
     <mat-expansion-panel class="dropdown">
@@ -19,10 +16,28 @@
           Profile
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <div class="drop-container">
-        <div>Account</div>
-        <div>Logout</div>
-      </div>
     </mat-expansion-panel>
   </mat-accordion>
 </mat-toolbar>
+
+<mat-grid-list class="body-container" [cols]="isMed ? (isSmall ? (isMb ? 1 : 2) : 3) : 4" gutterSize="20px" rowHeight="300px">
+  <mat-grid-tile [colspan]="isMed ? (isSmall ? (isMb ? 1 : 2) : 3) : 1" [rowspan]="isMed ? 1 : 2">
+    <div class="subtext">
+      <h2>Recently Played</h2>
+      <p>Jump back in</p>
+      <h1>Pick up your music right where you left off</h1>
+      <button class="button">Open Web Player</button>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="1">
+    <br>
+    <div>
+      <img src='../assets/images/FMacRumours.png' class="image"/>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="1"><img src='../assets/images/drake.jpg' class="image"/></mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="1"><img src='../assets/images/human.bin' class="image"/></mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="1"><img src='../assets/images/1975.png' class="image"/></mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="1"><img src='../assets/images/ts.png' class="image"/></mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="1"><img src='../assets/images/grad.jpg' class="image"/></mat-grid-tile>
+</mat-grid-list>
