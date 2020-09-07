@@ -9,5 +9,13 @@ This is a static web app I made to practice using the Angular Material UI librar
 - SCSS
 
 ## Preview
+Full Size
 ![Image of App](./src/assets/images/ss.png)
 
+
+Medium Size
+![Image of App](./src/assets/images/md.png)
+
+
+Small Size
+![Image of App](./src/assets/images/sm.png)
