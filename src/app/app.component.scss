@@ -1,3 +1,6 @@
+$large-bp: 1390px;
+$small-bp: 520px;
+
 .toolbar-container {
     display: flex;
     width: 100%;
@@ -7,14 +10,14 @@
     color: white;
     margin-bottom: 70px;
 
+    @media screen and (max-width: $small-bp) {
+        margin-bottom: 0px;
+    } 
+
     .col1 {
         flex-grow: 2;
         padding-left: 5%;
         font-size: 30px;
-
-        @media screen and (max-width: 600px) {
-            display: none; 
-        }
     }
 
     .mini-spacer {
@@ -45,12 +48,6 @@
     }
 }
 
-@media screen and (max-width: 520px) {
-    .toolbar-container {
-        margin-bottom: 0px;
-    }
-} 
-
 .body-container {
     margin: 0 auto;
     width: 90%;
@@ -71,6 +68,15 @@
         left: 0px;
         min-width: 300px;
         position: absolute;
+
+        @media screen and (max-width: $large-bp) {
+            position: relative;
+            text-align: center;
+        }  
+
+        @media screen and (max-width: $small-bp) {
+            font-size: 18px;
+        }
     }
 
     .button {
@@ -86,18 +92,8 @@
         text-transform: uppercase;
         font-weight: bold;
     }
-
-    @media screen and (max-width: 1390px) {
-        .subtext {
-          position: relative;
-          text-align: center;
-        }
-    }  
     
-    @media screen and (max-width: 520px) {
-        .subtext {
-          font-size: 18px;
-        }
+    @media screen and (max-width: $small-bp) {
         h1 {
             font-size: 16px;
         }
